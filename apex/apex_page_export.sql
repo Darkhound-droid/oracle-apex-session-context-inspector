@@ -1,0 +1,26 @@
+-- This file provides guidance for creating the single APEX page used by the
+-- Session Context Inspector. If you have access to export the page from APEX,
+-- replace these instructions with the real page export.
+--
+-- Page suggestion (one page is enough):
+--   Name: Session Context Inspector
+--   Type: Interactive Report or Classic Report
+--   Source SQL:
+--
+--     select category,
+--            name,
+--            value
+--       from table(apex_session_ctx_pkg.get_context)
+--      order by category, name;
+--
+-- Column formatting tips:
+--   - CATEGORY: Display as a group heading or break column.
+--   - NAME: 200px width.
+--   - VALUE: 400px width, escape special characters.
+--
+-- Authorization:
+--   - None (uses the current application's authentication/authorization).
+--
+-- Notes:
+--   - No external libraries required.
+--   - Compatible with APEX 21+.
